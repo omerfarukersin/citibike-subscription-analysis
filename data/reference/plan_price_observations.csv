@@ -1,0 +1,28 @@
+city,observed_date,source_url,source_file,plan,billing_cycle,price_usd,per_minute_usd
+CHI,2024-08-20,https://web.archive.org/web/20240820033613/https://divvybikes.com/pricing,20240820033613_divvybikes.com_pricing.html,Annual Membership,year,143.9,
+CHI,2026-01-05,https://web.archive.org/web/20260105000943/https://divvybikes.com/pricing,20260105000943_divvybikes.com_pricing.html,Annual Membership,year,143.9,
+CHI,2026-10-13,https://divvybikes.com/pricing,live_20261013_divvybikes.com_pricing.html,Annual Membership,year,143.9,
+CHI,2026-01-05,https://web.archive.org/web/20260105000943/https://divvybikes.com/pricing,20260105000943_divvybikes.com_pricing.html,Annual Membership (new-member offer),year,99.0,
+CHI,2026-10-13,https://divvybikes.com/pricing,live_20261013_divvybikes.com_pricing.html,Annual Membership (new-member offer),year,99.0,
+CHI,2024-08-20,https://web.archive.org/web/20240820033613/https://divvybikes.com/pricing,20240820033613_divvybikes.com_pricing.html,Day Pass,day,18.1,
+CHI,2026-01-05,https://web.archive.org/web/20260105000943/https://divvybikes.com/pricing,20260105000943_divvybikes.com_pricing.html,Day Pass,day,18.1,
+CHI,2026-10-13,https://divvybikes.com/pricing,live_20261013_divvybikes.com_pricing.html,Day Pass,day,19.9,
+CHI,2024-08-20,https://web.archive.org/web/20240820033613/https://divvybikes.com/pricing,20240820033613_divvybikes.com_pricing.html,Lyft Pink,year,199.0,
+CHI,2026-01-05,https://web.archive.org/web/20260105000943/https://divvybikes.com/pricing,20260105000943_divvybikes.com_pricing.html,Lyft Pink,year,199.0,
+CHI,2026-10-13,https://divvybikes.com/pricing,live_20261013_divvybikes.com_pricing.html,Lyft Pink,year,199.0,
+CHI,2024-08-20,https://web.archive.org/web/20240820033613/https://divvybikes.com/pricing,20240820033613_divvybikes.com_pricing.html,Single Ride,per ride,1.0,0.18
+CHI,2026-01-05,https://web.archive.org/web/20260105000943/https://divvybikes.com/pricing,20260105000943_divvybikes.com_pricing.html,Single Ride,per ride,1.0,0.19
+CHI,2026-10-13,https://divvybikes.com/pricing,live_20261013_divvybikes.com_pricing.html,Single Ride,per ride,1.0,0.2
+NYC,2023-08-13,https://web.archive.org/web/20230813184826/https://citibikenyc.com/pricing,20230813184826_citibikenyc.com_pricing.html,Annual Membership,year,205.0,
+NYC,2024-07-28,https://web.archive.org/web/20240728234803/https://citibikenyc.com/pricing,20240728234803_citibikenyc.com_pricing.html,Annual Membership,year,219.99,
+NYC,2026-01-28,https://citibikenyc.com/pricechange2026,live_20261013_citibikenyc.com_pricechange2026.html,Annual Membership,year,239.0,
+NYC,2026-10-13,https://citibikenyc.com/pricing,live_20261013_citibikenyc.com_pricing.html,Annual Membership,year,239.0,
+NYC,2023-08-13,https://web.archive.org/web/20230813184826/https://citibikenyc.com/pricing,20230813184826_citibikenyc.com_pricing.html,Day Pass,day,19.0,
+NYC,2024-07-28,https://web.archive.org/web/20240728234803/https://citibikenyc.com/pricing,20240728234803_citibikenyc.com_pricing.html,Day Pass,day,19.0,
+NYC,2026-10-13,https://citibikenyc.com/pricing,live_20261013_citibikenyc.com_pricing.html,Day Pass,day,25.0,
+NYC,2023-08-13,https://web.archive.org/web/20230813184826/https://citibikenyc.com/pricing,20230813184826_citibikenyc.com_pricing.html,Lyft Pink,year,199.0,
+NYC,2024-07-28,https://web.archive.org/web/20240728234803/https://citibikenyc.com/pricing,20240728234803_citibikenyc.com_pricing.html,Lyft Pink,year,199.0,
+NYC,2026-10-13,https://citibikenyc.com/pricing,live_20261013_citibikenyc.com_pricing.html,Lyft Pink,year,199.0,
+NYC,2023-08-13,https://web.archive.org/web/20230813184826/https://citibikenyc.com/pricing,20230813184826_citibikenyc.com_pricing.html,Single Ride,per ride,4.49,
+NYC,2024-07-28,https://web.archive.org/web/20240728234803/https://citibikenyc.com/pricing,20240728234803_citibikenyc.com_pricing.html,Single Ride,per ride,4.79,
+NYC,2026-10-13,https://citibikenyc.com/pricing,live_20261013_citibikenyc.com_pricing.html,Single Ride,per ride,4.99,

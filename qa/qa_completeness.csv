@@ -1,0 +1,6 @@
+source,city_id,rows,rows_flagged
+daily_ridership (zero-trip days),CHI,2192,0
+daily_ridership (zero-trip days),NYC,2192,2
+monthly_operations (unpublished months),NYC,36,2
+weather_daily,CHI,1096,0
+weather_daily,NYC,1096,0

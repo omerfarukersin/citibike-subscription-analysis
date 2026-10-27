@@ -1,0 +1,132 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.1cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Arial}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+
+\definecolor{accent}{HTML}{1F4E79}
+\hypersetup{colorlinks=true,urlcolor=accent,linkcolor=accent}
+\titleformat{\section}{\large\bfseries\color{accent}}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.5em}{}
+\setlist{nosep,leftmargin=1.4em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\renewcommand{\arraystretch}{1.25}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcommand{\f}[1]{\texttt{\small #1}}
+
+\title{\color{accent}\textbf{Mart Reference}\\[4pt]
+\large Citi Bike (NYC) vs Divvy (Chicago): the 16 CSV marts and the Tableau story}
+\date{Data accessed 13 October 2026}
+
+\begin{document}
+\maketitle
+
+\textbf{Purpose.} This reference describes the 16 CSV marts in \f{data/marts/}: what each file contains, which tab of the 4-tab Tableau story uses it (New York, NYC vs Chicago, Weather, Stations), and what to state alongside it. The packaged workbook \f{tableau/citibike\_story.twbx} is built from these files by \f{tableau/build\_story.py}; files not used by a tab are there for analysis in any BI tool.
+
+\textbf{Where:} folder \f{data/marts/} in this repository. Total size is about 1 MB; the largest file has 4{,}384 rows.\\
+\textbf{Period:} July 2023 -- June 2026 (36 months).\\
+\textbf{Findings behind the files:} \f{docs/findings.md}.
+
+\section{The Files at a Glance}
+
+{\small
+\begin{tabularx}{\linewidth}{@{}lrlL@{}}
+\toprule
+File & Rows & Dashboard tab & Shows \\
+\midrule
+\f{daily\_weather\_ridership} & 4{,}384 & all except Stations & every day, both cities, members vs.\ casual, with weather \\
+\f{weather\_rain\_effect} & 16 & -- (Weather tab recomputes it) & trips vs.\ a normal day, by rain level \\
+\f{weather\_snow\_effect} & 8 & -- (Weather tab recomputes it) & snow days vs.\ other winter days \\
+\f{weather\_temperature\_effect} & 20 & -- & average trips by temperature band \\
+\f{city\_monthly\_engagement} & 72 & -- & monthly trips and member share, both cities \\
+\f{seasonality} & 12 & -- (Weather tab recomputes it) & winter riding as a share of summer \\
+\f{city\_comparison} & 6 & NYC vs Chicago (reshaped) & member share and trip length per year \\
+\f{price\_history} & 27 & NYC vs Chicago & every plan price over time, with source link \\
+\f{price\_breakeven} & 6 & NYC vs Chicago & day passes that equal one annual membership \\
+\f{nyc\_monthly\_kpis} & 36 & New York & members, sign-ups, revenue, MRR, support \\
+\f{nyc\_revenue\_mix} & 288 & New York & revenue by category per month \\
+\f{survey\_plan\_held} & 8 & -- & which plan Citi Bike users used \\
+\f{survey\_frequency} & 6 & -- & how often people use Citi Bike \\
+\f{survey\_non\_use\_reasons} & 8 & New York & why people do not use Citi Bike \\
+\f{station\_activity} & 3{,}544 & Stations & every station with location and trips \\
+\f{ebike\_share} & 16 & NYC vs Chicago & e-bike share by city and rider type \\
+\bottomrule
+\end{tabularx}}
+
+\section{Files by Topic}
+
+\subsection{Weather (Hypotheses 1 and 2; Weather tab)}
+\textbf{\f{daily\_weather\_ridership}}: the main file. One row per day, city and rider type.
+\begin{itemize}
+\item Key columns: \f{trips}; \f{trips\_vs\_baseline} (1.00 = a normal day for that city, month and weekday type; 0.60 = 40\% fewer trips); weather columns \f{tmax\_c}, \f{precip\_mm}, \f{snow\_mm}, \f{wind\_ms}; ready-made groups \f{rain\_band}, \f{temp\_band}, \f{snow\_day}.
+\item The Weather tab computes its rain, snow and winter figures from this file, so they follow the dashboard filters.
+\end{itemize}
+\textbf{\f{weather\_rain\_effect}}, \textbf{\f{weather\_snow\_effect}}: the same comparisons as fixed tables. Example: heavy rain in NYC means casual trips $-44\%$ and member trips $-37\%$ vs.\ a dry day (both on the normal-day ratio).\\
+\textbf{\f{weather\_temperature\_effect}}: average trips by temperature band (this includes the season effect).\\
+\textbf{\f{seasonality}}: \f{winter\_to\_summer\_ratio}. Chicago casual riders keep only 10--13\% of their summer riding in winter; NYC members keep 39--57\%.
+
+\subsection{Cities and Prices (Hypotheses 3 and 4; NYC vs Chicago tab)}
+\textbf{\f{city\_comparison}}: member share (NYC 81--83\%, Chicago 64--65\%) and trip length per ride year; the workbook uses a long (reshaped) version of it.\\
+\textbf{\f{city\_monthly\_engagement}}: monthly trips and member share per city.\\
+\textbf{\f{price\_history}}: the annual price over time (NYC \$205 $\rightarrow$ \$219.99 $\rightarrow$ \$239; Chicago \$143.90). Each row includes its \f{source\_url}.\\
+\textbf{\f{price\_breakeven}}: an NYC membership costs the same as 9.6--11.6 day passes; Chicago's costs 7.2--8.0.\\
+\textbf{\f{ebike\_share}}: \f{ebike\_share} by city and rider type (NYC casual 77.5\% vs.\ member 70.5\%; Chicago 71.2\% vs.\ 65.7\%).
+
+\subsection{NYC Business KPIs (all five KPI categories; New York tab)}
+\textbf{\f{nyc\_monthly\_kpis}}: one row per month.
+\begin{itemize}
+\item Acquisition: \f{annual\_signups\_or\_renewals}, \f{single\_trip\_passes}, \f{day\_passes}
+\item Engagement: \f{trips\_per\_member}
+\item Retention: \f{total\_annual\_members}, \f{net\_change\_mom}, \f{net\_growth\_yoy}
+\item Monetization: \f{total\_revenue}, \f{revenue\_before\_tax}, \f{membership\_revenue}, \f{lyft\_pink\_revenue},\\ \f{rider\_revenue}, \f{rider\_revenue\_per\_trip} (all rider revenue, including memberships and Lyft Pink, excluding tax and sponsorship, divided by all trips), \f{list\_price\_mrr}, \f{list\_price\_arr}
+\item Satisfaction: \f{calls\_per\_100\_trips}, \f{avg\_handle\_minutes}
+\end{itemize}
+\textbf{\f{nyc\_revenue\_mix}}: revenue by \f{category} and month (36 months $\times$ 8 categories). E-bike fees are the largest revenue line. Tax is left out (it is sales tax collected for the government, not revenue); \f{share\_of\_total} is the share of revenue before tax. The derived May 2026 sponsorship value ($-$\$384k) comes from the year-to-date method, which assigns a later restatement of an earlier month to the missing month.
+
+\subsection{Customers (NYC DOT survey 2024)}
+\textbf{\f{survey\_plan\_held}}: \f{weighted\_share} by plan. 44\% of Citi Bike users hold a subscription.\\
+\textbf{\f{survey\_frequency}}: how often people ride.\\
+\textbf{\f{survey\_non\_use\_reasons}}: ``too expensive'' is cited by 35\%, ``not available nearby'' by 28\% (New York tab).\\
+Always use the weighted share columns; \f{respondents\_n} shows the sample size.
+
+\subsection{Stations (Stations tab)}
+\textbf{\f{station\_activity}}: map using \f{lat}/\f{lng}; circle size = member or casual trips (chosen with a rider-type control); \f{member\_share} is also available. Data comes from the four sample months.
+
+\section{Why These Files Are Good to Use}
+\begin{enumerate}
+\item \textbf{Real and validated.} Every value comes from an official source: Citi Bike, Divvy, the U.S. Bureau of Transportation Statistics, NOAA and NYC DOT. Trip counts match the federal statistics within 0.1\%, and a separate source-by-source audit checked report figures against the original PDFs.
+\item \textbf{Small and fast.} All files are far below Tableau Public's row limit, so dashboards load instantly.
+\item \textbf{Ready to use.} One row per day, month or station, with clear column names. No cleaning is needed in Tableau.
+\item \textbf{Fair comparisons are built in.} The hard calculations were done in SQL. For example, \f{trips\_vs\_baseline} removes season and weekday effects, so the weather comparison is like-for-like.
+\item \textbf{Filter-friendly.} Shared columns (\f{city\_id}, \f{rider\_type}, \f{year\_month}, \f{season}) let one filter control a whole dashboard.
+\item \textbf{Traceable.} Each file is produced by a SQL view in \f{sql/kpis/}, so every number can be explained step by step.
+\end{enumerate}
+
+\section{What to State on the Dashboard}
+\begin{itemize}
+\item Weather and city results are \textbf{associations, not causes}.
+\item \f{weather\_temperature\_effect} includes the season effect (cold days are winter days). Use the rain and snow files for weather effects.
+\item \f{nyc\_monthly\_kpis}: \textbf{Feb and May 2026}: reports not published, so members, sign-ups and support figures are blank; revenue is calculated from year-to-date totals and \f{revenue\_basis} = \f{derived\_from\_ytd} marks it. \f{report\_scope\_changed} marks March 2025, when Jersey City trips were added to the reports. MRR is an upper bound because some members pay discounted rates.
+\item No churn is shown: the reports combine new sign-ups and renewals.
+\item Survey files cover \textbf{people who cycle} (about 34\% of adults).
+\item Membership, revenue and support data exist for \textbf{NYC only}.
+\item Credit the sources on the dashboard: Citi Bike, Divvy, U.S. BTS, NOAA, NYC DOT.
+\end{itemize}
+
+\section{Using the Files in Tableau Public}
+\begin{enumerate}
+\item Open Tableau Public $\rightarrow$ \emph{Connect} $\rightarrow$ \emph{Text file} $\rightarrow$ choose a CSV from \f{data/marts/}.
+\item Use one data source per sheet or dashboard. Add the others via \emph{Data} $\rightarrow$ \emph{New Data Source}; you do not need to join the files.
+\item Check field types after loading: \f{date} as Date, \f{lat}/\f{lng} as Latitude/Longitude, shares as percentages.
+\item \textbf{Suggested first chart:} \f{daily\_weather\_ridership}, \f{tmax\_c} on columns, \f{trips\_vs\_baseline} on rows, colour by \f{rider\_type}, filter by \f{city\_id}.
+\end{enumerate}
+
+\end{document}

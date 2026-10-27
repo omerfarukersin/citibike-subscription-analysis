@@ -1,0 +1,131 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Arial}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+
+\definecolor{accent}{HTML}{1F4E79}
+\hypersetup{colorlinks=true,urlcolor=accent,linkcolor=accent}
+\titleformat{\section}{\large\bfseries\color{accent}}{\thesection}{0.6em}{}
+\setlist{nosep,leftmargin=1.4em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\renewcommand{\arraystretch}{1.3}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcommand{\f}[1]{\texttt{\small #1}}
+
+\title{\color{accent}\textbf{KPI Framework}\\[4pt]
+\large Citi Bike (NYC) vs Divvy (Chicago) as Subscription Businesses}
+\date{Period: July 2023 -- June 2026}
+
+\begin{document}
+\sloppy
+\maketitle
+
+\textbf{Overview.} \textbf{16 KPIs} are measured across five categories (acquisition, engagement, retention, monetization, satisfaction). The \textbf{annual membership is the subscription} (``members''); single rides and day passes are pay-as-you-go (``casual''). Most KPIs are for NYC, because only Citi Bike publishes membership, revenue and support figures. Engagement and prices are compared for NYC vs.\ Chicago.
+
+\section{Acquisition --- getting new subscribers}
+
+\begin{tabularx}{\linewidth}{@{}P{3.9cm}P{4.6cm}L@{}}
+\toprule
+KPI & Definition & Result \\
+\midrule
+Sign-ups or renewals (NYC) & annual memberships bought or renewed per month & strongly seasonal: about 3,400--4,500 in Jan/Feb vs.\ 18,300--20,600 in summer \\
+Passes sold (NYC) & single-trip and day passes sold per month (potential members) & day passes: about 2,000--4,000 in Jan/Feb (2,000--7,000 across Dec--Feb) vs.\ 16,000--37,000 in summer. Single-trip passes: \textit{use with caution}: about 1 million a month in summer 2024; in 2025 about 200,000--265,000 in Jan--Feb and May--Sep but 37,000--173,000 in Mar, Apr and Oct--Dec; and Jan and Feb 2025 show the identical figure (199,930), which suggests a counting change or a reporting error. \\
+Plan used (survey) & how Citi Bike users last accessed it: the acquisition channel & \textbf{44\% hold a subscription}: full-price annual 17.6\%, Lyft Pink 13.7\%, Reduced Fare 6.1\%, employer/school 5.4\%, Lyft Pink monthly 1.5\%. Single ride 46\%, day pass 6\%. \\
+\bottomrule
+\end{tabularx}
+
+\section{Engagement --- how much subscribers use it}
+
+\begin{tabularx}{\linewidth}{@{}P{3.9cm}P{4.6cm}L@{}}
+\toprule
+KPI & Definition & Result \\
+\midrule
+Member share of trips (NYC vs.\ Chicago) & member trips $\div$ all trips & \textbf{NYC 81--83\%}, \textbf{Chicago 64--65\%} \\
+Trips per member (NYC) & member trips $\div$ annual members, per month & about 12.5--15 in January vs.\ about 32 in Sep/Oct \\
+Average trip length (both) & minutes per trip & members about 11--12 min; casual riders about 17--18 min \\
+Use frequency (survey) & how often cyclists use Citi Bike & 14.4\% at least monthly; 49.5\% have never used it \\
+\bottomrule
+\end{tabularx}
+
+\section{Retention --- keeping subscribers}
+
+\begin{tabularx}{\linewidth}{@{}P{3.9cm}P{4.6cm}L@{}}
+\toprule
+KPI & Definition & Result \\
+\midrule
+Net membership growth (NYC) & change in total annual members, month on month and year on year & from $-1.6\%$ (Jul 2024) to $+5.6\%$ (Sep 2025); \textbf{127,485 $\rightarrow$ 138,055} members (Jun 2024 $\rightarrow$ Jun 2026) \\
+Lapsed users (survey) & used Citi Bike before, but not in the last 12 months & 19.4\% of cyclists \\
+Winter vs.\ summer riding (both) & winter daily trips $\div$ summer daily trips & members keep \textbf{2--3$\times$ more} of their summer riding than casual riders \\
+\bottomrule
+\end{tabularx}
+
+\textbf{No churn rate:} the reports give one figure for ``signed up or renewed'', so churn cannot be calculated honestly. Net membership growth is used instead.
+
+\section{Monetization --- revenue}
+
+\begin{tabularx}{\linewidth}{@{}P{3.9cm}P{4.6cm}L@{}}
+\toprule
+KPI & Definition & Result \\
+\midrule
+Revenue mix (NYC) & each revenue category $\div$ revenue before tax (sales tax is passed on to the government) & \textbf{e-bike fees are the largest line} (\$101.7M), then casual rides \$57.8M, memberships \$32.4M, Lyft Pink \$18.2M (Jul 2025 -- Jun 2026; Feb and May 2026 calculated from year-to-date totals) \\
+List-price MRR / ARR (NYC) & annual members $\times$ annual price $\div$ 12 (ARR $= \times 12$) & about \$2.2M $\rightarrow$ \$2.7M per month; an upper bound, as some members pay discounted rates \\
+Price and break-even (NYC vs.\ Chicago) & annual price; annual price $\div$ day-pass price & NYC \$205 $\rightarrow$ \$219.99 $\rightarrow$ \$239 (= 9.6--11.6 day passes); Chicago \$143.90 (= 7.2--8.0 day passes) \\
+\bottomrule
+\end{tabularx}
+
+\section{Satisfaction --- customer experience}
+
+\begin{tabularx}{\linewidth}{@{}P{3.9cm}P{4.6cm}L@{}}
+\toprule
+KPI & Definition & Result \\
+\midrule
+Support calls per 100 trips (NYC) & phone calls $\div$ trips $\times$ 100 & improved from 0.57 (2023) to 0.23 (2026) \\
+Call handling time (NYC) & average minutes per support call & \textbf{worsened from 6.0 to 15.3 minutes} (annual averages, 2023 $\rightarrow$ 2026 Jan--Jun; monthly peak 18.6 in Jan 2026, 10.9 by Jun 2026): a warning sign \\
+Reasons for not using (survey) & share of non-users citing each reason & prefer own bike 52\%, \textbf{too expensive 35\%}, not available nearby 28\%, uncomfortable biking in NYC 15\% \\
+\bottomrule
+\end{tabularx}
+
+\textbf{No NPS or CSAT:} none is published, so support figures and survey answers are used as stand-ins.
+
+\section{What the KPIs show}
+\begin{itemize}
+\item \textbf{Subscribers are the stable base:} they make most trips and keep riding in winter and bad weather.
+\item \textbf{Growth depends on the season:} most sign-ups happen in spring and summer, when casual riding also peaks.
+\item \textbf{Grow from new riders rather than converting casual riders:} casual fees bring about \$7.32 per casual trip against \$1.35 of membership fees (Memberships + Lyft Pink) per member trip (Jul 2025 -- Jun 2026; e-bike fees are not split by rider type and are left out of both), so a conversion lowers revenue per trip. Report revenue includes Jersey City and Hoboken from Mar 2025 while trips are NYC only, so both figures are overstated by up to about 2.5\%; the roughly fivefold gap is unchanged. Price (35\%) and no station nearby (28\%) are the reasons non-users give that the operator can act on. Query: \f{sql/analysis/recommendation\_checks.sql}.
+\item \textbf{Channels beyond direct sales matter:} Lyft Pink, employer/school plans and Reduced Fare together make up over a quarter of users.
+\item \textbf{Pricing structure matters, not only price:} NYC has a higher member share despite a pricier membership; one possible explanation is its flat single-ride price, which may make subscribing more attractive (association only).
+\item \textbf{Watch customer service:} fewer calls, but much longer handling times.
+\end{itemize}
+
+\section{Sources and notes}
+\begin{itemize}
+\item \textbf{Sources:}
+  \begin{itemize}
+  \item Citi Bike monthly operating reports (NYC);
+  \item Citi Bike and Divvy trip data, and the U.S.\ Bureau of Transportation Statistics (trips);
+  \item Citi Bike and Divvy pricing pages (prices);
+  \item NYC DOT Citywide Mobility Survey 2024 (survey KPIs, cyclists only, weighted).
+  \end{itemize}
+\item \textbf{Formulas:} \f{sql/kpis/01--10\_*.sql}. \textbf{Results:} \f{data/marts/nyc\_monthly\_kpis.csv} and the other files in \f{data/marts/}. \textbf{Dashboard:} the ``New York'' tab of the Tableau story.
+\item \textbf{Notes:}
+  \begin{itemize}
+  \item The February and May 2026 reports were not published. Members, sign-ups and support figures are left blank; revenue is calculated from the year-to-date totals in the neighbouring reports.
+  \item From March 2025, the reports' trip totals include Jersey City and Hoboken.
+  \item Emails/web forms look unreliable from Jul 2023 to Apr 2024 (1--6 a month in 2023, 0 in Jan 2024, then about 119,000 in each of Feb--Apr 2024); support-contact trends should start in May 2024.
+  \item Revenue is preliminary and unaudited.
+  \item Prices are snapshot observations.
+  \item Single-trip pass counts in the reports look inconsistent from 2025 (see Acquisition).
+  \end{itemize}
+\end{itemize}
+
+\end{document}

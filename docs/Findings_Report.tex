@@ -1,0 +1,121 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.1cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Arial}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+
+\definecolor{accent}{HTML}{1F4E79}
+\hypersetup{colorlinks=true,urlcolor=accent,linkcolor=accent}
+\titleformat{\section}{\large\bfseries\color{accent}}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.5em}{}
+\setlist{nosep,leftmargin=1.4em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\renewcommand{\arraystretch}{1.25}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+\title{\color{accent}\textbf{What Drives Subscription Engagement in Bike Share?}\\[4pt]
+\large Idea, Logic and Findings --- Citi Bike (NYC) vs Divvy (Chicago), Jul 2023 -- Jun 2026}
+\date{Built for the BU7141 Data Management \& Visualisation module, Trinity Business School (Oct 2026)}
+
+\begin{document}
+\maketitle
+
+\section{The Idea}
+\textbf{Why bike share?} The aim was to analyse a subscription business using real, public data. Companies almost never publish customer-level subscription data. Citi Bike is a rare exception: it publishes every trip, monthly reports with member numbers and revenue, and its prices. Its \textbf{annual membership is a subscription}, while single rides and day passes are the pay-as-you-go alternative. Members versus casual riders is therefore subscribers versus non-subscribers.
+
+\textbf{Why compare with Chicago?} Divvy is run by the same operator (Lyft) and publishes data in the same format. It differs in two useful ways: its \textbf{membership is cheaper} (\$143.90 vs.\ \$205--\$239 in NYC) and its \textbf{winters are harsher}. Same business model, different conditions, so the comparison shows how outcomes differ between the two settings.
+
+\textbf{Why weather?} A subscriber has already paid, so an extra ride costs them almost nothing. A casual rider pays for every trip. If the subscription logic holds, \textbf{members should keep riding in bad weather more than casual riders do}. Weather is a natural test of how ``sticky'' subscribers are.
+
+\textbf{Research question:} \emph{What drives subscription engagement in bike share? Price, city and weather in New York vs.\ Chicago.}
+
+\section{The Logic: Hypotheses and Method}
+
+\begin{tabularx}{\linewidth}{@{}lLL@{}}
+\toprule
+& Hypothesis & Rationale \\
+\midrule
+H1 & Casual riders are more weather-sensitive than members & Members have prepaid; casual riders decide ride by ride \\
+H2 & The winter drop is deeper in Chicago, and members hold up better & Colder winters; members keep their habit \\
+H3 & Member share of trips differs between the cities & Different prices and pricing structures \\
+H4 & E-bike use differs between members and casual riders & E-bike fees hit pay-per-ride users differently \\
+\bottomrule
+\end{tabularx}
+
+\textbf{How they were tested}
+\begin{itemize}
+\item \textbf{Data:} 6 public source types, logged as 10 entries in \texttt{docs/source\_log.csv}: (1) Citi Bike and Divvy trip files, (2) Citi Bike's monthly operating reports (34 PDFs), (3) pricing pages with Wayback Machine snapshots and the 2026 price notice, (4) U.S. Bureau of Transportation Statistics (BTS) daily ridership, (5) NOAA GHCN-Daily weather, (6) the NYC DOT Citywide Mobility Survey 2024. Everything is loaded into one DuckDB database (see the ERD).
+\item \textbf{Fair weather comparison:} each day is compared with a \emph{normal day} for the same city, rider type, month and weekday type. This removes season and weekday effects, leaving the weather difference.
+\item \textbf{Seasonality:} average daily trips in winter (Dec--Feb) divided by summer (Jun--Aug), per year.
+\item \textbf{Verification:} sources were cross-checked against each other (trip counts match federal data within 0.1\%), and a separate source-by-source audit compared stored values with the original PDFs, HTML and CSVs.
+\end{itemize}
+
+\section{Findings}
+
+\subsection*{H1 --- Casual riders are more weather-sensitive \hfill \textcolor{accent}{Supported}}
+\begin{tabularx}{\linewidth}{@{}lCCCC@{}}
+\toprule
+Change vs.\ a dry day$^{*}$ & NYC member & NYC casual & Chicago member & Chicago casual \\
+\midrule
+Moderate rain (5--20 mm) & $-22\%$ & $-29\%$ & $-20\%$ & $-26\%$ \\
+Heavy rain (20+ mm) & $-37\%$ & $-44\%$ & $-29\%$ & $-35\%$ \\
+Snow day vs.\ winter day without snow & $-34\%$ & $-42\%$ & $-14\%$ & $-22\%$ \\
+\bottomrule
+\end{tabularx}
+
+{\small $^{*}$Both sides are measured on the normal-day ratio (same city, rider type, month and weekday type), so season and weekday are adjusted for.}
+
+In moderate or heavy rain and on snow days, casual trips fall \textbf{5--8 percentage points more} than member trips, in both cities. Subscribers are the stable base.
+
+\subsection*{H2 --- Deeper winter drop in Chicago; members hold up better \hfill \textcolor{accent}{Supported}}
+Winter riding as a share of summer riding, over three winters: Chicago casual \textbf{10--13\%}, Chicago member 29--36\%; NYC casual 15--28\%, NYC member \textbf{39--57\%}. Members keep about 2--3 times more of their summer riding than casual riders.
+
+\subsection*{H3 --- Member share differs, but not because of price alone \hfill \textcolor{accent}{Supported}}
+Member share of trips is \textbf{81--83\% in NYC} vs.\ \textbf{64--65\% in Chicago}, although NYC's membership is more expensive. The pricing \emph{structure} differs: an NYC single ride costs a flat \$4.49--\$4.99, while Chicago charges \$1 + \$0.18--0.20 per minute. Short casual rides are cheaper in Chicago, which may weaken the reason to subscribe (not tested). This is an association; city size, commuting and tourism also differ.
+
+\subsection*{H4 --- Casual riders use e-bikes more \hfill \textcolor{accent}{Supported}}
+E-bike share of trips (four sample months): NYC casual 77.5\% vs.\ member 70.5\%; Chicago casual 71.2\% vs.\ member 65.7\%.
+
+\subsection*{KPIs by category (NYC)}
+\begin{tabularx}{\linewidth}{@{}lL@{}}
+\toprule
+Acquisition & Annual sign-ups/renewals are highly seasonal (about 3,400--4,500 in Jan/Feb vs.\ 18,300--20,600 in summer). 44\% of Citi Bike users hold a subscription, via full-price annual, Lyft Pink, Reduced Fare or employer/school. \\
+Engagement & Members make 81--83\% of trips; about 12.5--15 trips per member in January vs.\ about 32 in Sep/Oct. \\
+Retention & Membership grew from 127{,}485 (Jun 2024) to 138{,}055 (Jun 2026); 19\% of cyclists are lapsed Citi Bike users. \\
+Monetization & Annual price rose \$205 $\rightarrow$ \$219.99 $\rightarrow$ \$239. E-bike fees are the largest revenue line (\$101.7M in the latest year; Feb and May 2026 calculated from year-to-date totals). \\
+Satisfaction & Support calls fell from 0.57 to 0.23 per 100 trips, but \textbf{average call handling time rose from 6.0 to 15.3 minutes} (annual averages, 2023 $\rightarrow$ 2026 Jan--Jun; monthly peak 18.6 in Jan 2026, 10.9 by Jun 2026). ``Too expensive'' is the second most common reason for not using Citi Bike (35\%). \\
+\bottomrule
+\end{tabularx}
+
+\section{What It Means for a Subscription Business, and Recommendations}
+\begin{itemize}
+\item \textbf{Subscribers are the reliable base.} They ride through bad weather and winter, so revenue and usage from members are far more predictable than from casual riders.
+\item \textbf{Pricing structure matters, not only price.} A cheap pay-per-minute option can reduce the incentive to subscribe even when the membership itself is cheap.
+\item \textbf{Grow from new riders rather than converting casual riders.} Casual fees bring about \$7.32 per casual trip against \$1.35 of membership fees (Memberships + Lyft Pink) per member trip in NYC, Jul 2025--Jun 2026 (e-bike fees are not split by rider type and are left out of both). Converting a casual rider to a member would lower revenue per trip. Report revenue includes Jersey City and Hoboken from Mar 2025 while trips are NYC only, so both figures are overstated by up to about 2.5\%; the roughly fivefold gap is unchanged. Among cyclists who don't use Citi Bike, 35\% say it is too expensive and 28\% that it is not available nearby: entry pricing and coverage are the levers.
+\item \textbf{Clear docks quickly after snow.} In NYC's 2025--26 winter, the 31 dry days with snow still on the ground lost slightly more trips in total than the 13 snowfall days (about 298,000 vs.\ 281,000 below normal).
+\item \textbf{Plan for warm winter days.} On the 23 dry winter days at least 8\,\textdegree C warmer than usual for the month (19 in Chicago), casual riding ran at about 1.8 times a normal day, members about 1.4 times.
+\item Queries and definitions for these figures: \texttt{sql/analysis/recommendation\_checks.sql}. All are associations and should be tested before money is spent.
+\item \textbf{Channels beyond direct sales matter:} Lyft Pink, employer/school plans and Reduced Fare together account for over a quarter of Citi Bike users.
+\item \textbf{Watch customer service:} longer handling times are an early warning sign for satisfaction.
+\end{itemize}
+
+\section{Limitations}
+\begin{itemize}
+\item Weather and city results are \textbf{associations, not causes}.
+\item No churn rate: the reports combine new sign-ups and renewals, so net membership growth is used instead.
+\item Membership, revenue and support data exist for NYC only; the Chicago comparison uses trips, prices and weather.
+\item Trip data has no rider ID; NYC trip-level analysis uses a four-month seasonal sample (the full daily series comes from BTS).
+\item The survey's Citi Bike questions were asked only of people who cycle (about 34\% of adults).
+\item Data issues found and handled: BTS double-counts Chicago in Jan 2026; from Mar 2025, Citi Bike's reports include Jersey City; the Feb and May 2026 reports were not published (their revenue was calculated from year-to-date totals; other figures left blank).
+\end{itemize}
+
+\end{document}

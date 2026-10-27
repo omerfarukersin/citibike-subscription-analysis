@@ -1,0 +1,9 @@
+reason_code,reason,respondents_n,weighted_share_of_non_users
+1,I do not know what Citi Bike is,17,0.0220829361
+2,Too expensive,252,0.3532056397
+3,Not available in my neighborhood / Not convenient to where I want to go,205,0.2784955412
+4,Prefer to use my personal bicycle,420,0.5172837489
+5,Service is too unreliable,36,0.050555773
+6,Do not feel comfortable biking in NYC,130,0.1517642633
+7,Do not know how to ride a bike/can't ride a bike,4,0.003912273
+8,Do not feel Citi Bike is for people like me,54,0.086839139

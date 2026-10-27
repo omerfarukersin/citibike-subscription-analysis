@@ -1,0 +1,8 @@
+duckdb==1.5.6
+pandas==3.0.6
+pyarrow==26.0.0
+pypdf==6.20.1
+requests==2.34.2
+openpyxl==3.1.5
+tableauhyperapi==0.0.26479
+matplotlib==3.11.2

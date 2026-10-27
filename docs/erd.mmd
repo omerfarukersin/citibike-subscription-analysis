@@ -1,0 +1,178 @@
+erDiagram
+    calendar_date {
+        DATE date PK
+        INTEGER year
+        INTEGER month
+        VARCHAR year_month
+        VARCHAR day_of_week
+        BOOLEAN is_weekend
+        BOOLEAN is_holiday
+        VARCHAR season
+    }
+    city {
+        VARCHAR city_id PK
+        VARCHAR city_name
+        VARCHAR system_name
+        VARCHAR operator
+        VARCHAR weather_station_id
+    }
+    daily_ridership {
+        VARCHAR city_id PK, FK
+        DATE date PK, FK
+        VARCHAR rider_type PK, FK
+        BIGINT trips
+        DOUBLE trip_minutes
+        VARCHAR source
+    }
+    monthly_operations {
+        VARCHAR city_id PK, FK
+        VARCHAR year_month PK
+        BOOLEAN report_published
+        INTEGER total_annual_members
+        BOOLEAN report_mentions_jersey_city
+        BOOLEAN trips_include_jersey_city
+        INTEGER annual_signups_or_renewals
+        BIGINT trips_total
+        BIGINT trips_member
+        BIGINT trips_casual
+        DOUBLE avg_trip_minutes
+        INTEGER active_stations
+        DOUBLE avg_fleet
+        VARCHAR source_file
+    }
+    pass_sales {
+        VARCHAR plan_id PK, FK
+        VARCHAR year_month PK
+        INTEGER quantity
+        VARCHAR source_file
+    }
+    plan {
+        VARCHAR plan_id PK
+        VARCHAR city_id FK
+        VARCHAR plan_name
+        VARCHAR billing_cycle
+        BOOLEAN is_subscription
+        VARCHAR rider_type FK
+    }
+    plan_price {
+        VARCHAR plan_id PK, FK
+        DATE observed_date PK
+        DECIMAL price_usd
+        DECIMAL per_minute_usd
+        VARCHAR source_url
+    }
+    qa_bts_daily {
+        VARCHAR city_id PK, FK
+        DATE date PK, FK
+        VARCHAR rider_type PK, FK
+        BIGINT trips
+        DOUBLE trip_minutes
+    }
+    qa_bts_jersey_city_daily {
+        DATE date PK, FK
+        VARCHAR rider_type PK, FK
+        BIGINT trips
+    }
+    revenue {
+        VARCHAR city_id PK, FK
+        VARCHAR year_month PK, FK
+        VARCHAR category PK
+        DECIMAL amount_mtd_usd
+        DECIMAL amount_ytd_usd
+        VARCHAR basis
+        VARCHAR source_file
+    }
+    rider_type {
+        VARCHAR rider_type PK
+        VARCHAR description
+    }
+    station {
+        VARCHAR station_key PK
+        VARCHAR city_id FK
+        VARCHAR station_id
+        VARCHAR station_name
+        DOUBLE lat
+        DOUBLE lng
+    }
+    support_contacts {
+        VARCHAR city_id PK, FK
+        VARCHAR year_month PK, FK
+        VARCHAR channel PK
+        INTEGER contacts
+        DOUBLE avg_handle_minutes
+        VARCHAR source_file
+    }
+    survey_code {
+        VARCHAR variable PK
+        INTEGER code PK
+        VARCHAR label
+    }
+    survey_non_use_reason {
+        BIGINT person_id PK, FK
+        INTEGER reason_code PK
+    }
+    survey_plan_held {
+        BIGINT person_id PK, FK
+        INTEGER access_code
+        VARCHAR plan_id FK
+    }
+    survey_respondent {
+        BIGINT person_id PK
+        BIGINT hh_id
+        INTEGER age_code
+        INTEGER gender_code
+        INTEGER employment_code
+        INTEGER citi_bike_freq_code
+        INTEGER citi_bike_type_code
+        DOUBLE person_weight
+    }
+    trip_sample {
+        VARCHAR city_id PK, FK
+        VARCHAR ride_id PK
+        VARCHAR rider_type FK
+        VARCHAR rideable_type
+        TIMESTAMP started_at
+        TIMESTAMP ended_at
+        DATE date FK
+        DOUBLE duration_min
+        VARCHAR start_station_key FK
+        VARCHAR end_station_key FK
+        BOOLEAN is_valid
+    }
+    weather_daily {
+        VARCHAR city_id PK, FK
+        DATE date PK, FK
+        DOUBLE tmax_c
+        DOUBLE tmin_c
+        DOUBLE precip_mm
+        DOUBLE snow_mm
+        DOUBLE snow_depth_mm
+        DOUBLE wind_ms
+    }
+    city ||--o{ daily_ridership : "city_id"
+    calendar_date ||--o{ daily_ridership : "date"
+    rider_type ||--o{ daily_ridership : "rider_type"
+    city ||--o{ monthly_operations : "city_id"
+    plan ||--o{ pass_sales : "plan_id"
+    city ||--o{ plan : "city_id"
+    rider_type ||--o{ plan : "rider_type"
+    plan ||--o{ plan_price : "plan_id"
+    city ||--o{ qa_bts_daily : "city_id"
+    calendar_date ||--o{ qa_bts_daily : "date"
+    rider_type ||--o{ qa_bts_daily : "rider_type"
+    calendar_date ||--o{ qa_bts_jersey_city_daily : "date"
+    rider_type ||--o{ qa_bts_jersey_city_daily : "rider_type"
+    city ||--o{ revenue : "city_id"
+    monthly_operations ||--o{ revenue : "city_id,year_month"
+    city ||--o{ station : "city_id"
+    city ||--o{ support_contacts : "city_id"
+    monthly_operations ||--o{ support_contacts : "city_id,year_month"
+    survey_respondent ||--o{ survey_non_use_reason : "person_id"
+    survey_respondent ||--o{ survey_plan_held : "person_id"
+    plan ||--o{ survey_plan_held : "plan_id"
+    city ||--o{ trip_sample : "city_id"
+    rider_type ||--o{ trip_sample : "rider_type"
+    calendar_date ||--o{ trip_sample : "date"
+    station ||--o{ trip_sample : "start_station_key"
+    city ||--o{ weather_daily : "city_id"
+    calendar_date ||--o{ weather_daily : "date"

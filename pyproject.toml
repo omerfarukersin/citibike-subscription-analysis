@@ -1,0 +1,17 @@
+# Tool configuration only (the project is a set of scripts, not an installable package).
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+extend-exclude = [".venv", "data"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B"]
+
+[tool.ruff.lint.isort]
+# scripts in src/ and tableau/ import each other by module name
+known-first-party = ["build_workbook", "build_gallery", "build_interactive", "build_story", "extract_reports"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-p no:cacheprovider"

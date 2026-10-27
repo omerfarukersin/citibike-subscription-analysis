@@ -1,0 +1,289 @@
+year_month,month_start,category,amount_mtd_usd,basis,share_of_total
+2023-07,2023-07-01,Casual Ridership,5485458.31,reported,0.3427840826
+2023-07,2023-07-01,Classic Bike Refunds & Discounts,-348009.9,reported,-0.0217469986
+2023-07,2023-07-01,Ebike Refunds & Discounts,-66921.27,reported,-0.0041818832
+2023-07,2023-07-01,Ebike Surcharges & Other Fees,3965621.74,reported,0.2478101069
+2023-07,2023-07-01,Lyft Pink,1507837.0,reported,0.0942241274
+2023-07,2023-07-01,Memberships,3453459.76,reported,0.2158053108
+2023-07,2023-07-01,Overages,41279.34,reported,0.0025795293
+2023-07,2023-07-01,Sponsorship,1963938.47,reported,0.1227257248
+2023-08,2023-08-01,Casual Ridership,5803889.69,reported,0.3767079131
+2023-08,2023-08-01,Classic Bike Refunds & Discounts,-390242.27,reported,-0.0253291084
+2023-08,2023-08-01,Ebike Refunds & Discounts,-78707.49,reported,-0.0051085971
+2023-08,2023-08-01,Ebike Surcharges & Other Fees,4459088.74,reported,0.2894221123
+2023-08,2023-08-01,Lyft Pink,1583061.0,reported,0.1027503342
+2023-08,2023-08-01,Memberships,3872286.97,reported,0.251335091
+2023-08,2023-08-01,Overages,-204.0,reported,-1.32408e-05
+2023-08,2023-08-01,Sponsorship,157696.95,reported,0.0102354959
+2023-09,2023-09-01,Casual Ridership,4817328.93,reported,0.3700785001
+2023-09,2023-09-01,Classic Bike Refunds & Discounts,-425586.8,reported,-0.0326945755
+2023-09,2023-09-01,Ebike Refunds & Discounts,-114277.28,reported,-0.0087790485
+2023-09,2023-09-01,Ebike Surcharges & Other Fees,3955955.9,reported,0.3039058049
+2023-09,2023-09-01,Lyft Pink,1523971.0,reported,0.1170750244
+2023-09,2023-09-01,Memberships,3250698.44,reported,0.2497262737
+2023-09,2023-09-01,Overages,-164.0,reported,-1.25989e-05
+2023-09,2023-09-01,Sponsorship,9120.0,reported,0.0007006198
+2023-10,2023-10-01,Casual Ridership,4664473.61,reported,0.3387566123
+2023-10,2023-10-01,Classic Bike Refunds & Discounts,-342886.78,reported,-0.0249020948
+2023-10,2023-10-01,Ebike Refunds & Discounts,-113364.32,reported,-0.0082330647
+2023-10,2023-10-01,Ebike Surcharges & Other Fees,4390553.24,reported,0.3188631914
+2023-10,2023-10-01,Lyft Pink,953926.1,reported,0.0692787227
+2023-10,2023-10-01,Memberships,2190740.72,reported,0.1591021767
+2023-10,2023-10-01,Overages,,reported,
+2023-10,2023-10-01,Sponsorship,2025952.45,reported,0.1471344563
+2023-11,2023-11-01,Casual Ridership,2892131.9,reported,0.3448117504
+2023-11,2023-11-01,Classic Bike Refunds & Discounts,-228326.98,reported,-0.027222073
+2023-11,2023-11-01,Ebike Refunds & Discounts,-64223.02,reported,-0.0076569301
+2023-11,2023-11-01,Ebike Surcharges & Other Fees,3354228.97,reported,0.3999048461
+2023-11,2023-11-01,Lyft Pink,562098.5,reported,0.0670156737
+2023-11,2023-11-01,Memberships,1463279.53,reported,0.1744581483
+2023-11,2023-11-01,Overages,,reported,
+2023-11,2023-11-01,Sponsorship,408378.8,reported,0.0486885847
+2023-12,2023-12-01,Casual Ridership,2044800.29,reported,0.3328822141
+2023-12,2023-12-01,Classic Bike Refunds & Discounts,-139210.68,reported,-0.0226627312
+2023-12,2023-12-01,Ebike Refunds & Discounts,-34899.73,reported,-0.0056814836
+2023-12,2023-12-01,Ebike Surcharges & Other Fees,2608705.72,reported,0.4246829092
+2023-12,2023-12-01,Lyft Pink,366412.9,reported,0.0596500001
+2023-12,2023-12-01,Memberships,1092278.72,reported,0.1778169538
+2023-12,2023-12-01,Overages,,reported,
+2023-12,2023-12-01,Sponsorship,204626.94,reported,0.0333121377
+2024-01,2024-01-01,Casual Ridership,1270987.94,reported,0.1813520152
+2024-01,2024-01-01,Classic Bike Refunds & Discounts,-93404.84,reported,-0.0133275505
+2024-01,2024-01-01,Ebike Refunds & Discounts,-53350.79,reported,-0.0076124037
+2024-01,2024-01-01,Ebike Surcharges & Other Fees,2376655.27,reported,0.3391151159
+2024-01,2024-01-01,Lyft Pink,354196.82,reported,0.0505388801
+2024-01,2024-01-01,Memberships,1117007.42,reported,0.1593811713
+2024-01,2024-01-01,Overages,,reported,
+2024-01,2024-01-01,Sponsorship,2036310.81,reported,0.2905527718
+2024-02,2024-02-01,Casual Ridership,1616522.12,reported,0.2793317496
+2024-02,2024-02-01,Classic Bike Refunds & Discounts,-92680.33,reported,-0.0160149734
+2024-02,2024-02-01,Ebike Refunds & Discounts,-30969.29,reported,-0.0053514306
+2024-02,2024-02-01,Ebike Surcharges & Other Fees,2859252.12,reported,0.4940729776
+2024-02,2024-02-01,Lyft Pink,303101.38,reported,0.0523753048
+2024-02,2024-02-01,Memberships,1013477.82,reported,0.1751269154
+2024-02,2024-02-01,Overages,,reported,
+2024-02,2024-02-01,Sponsorship,118401.02,reported,0.0204594565
+2024-03,2024-03-01,Casual Ridership,2900023.26,reported,0.3449789842
+2024-03,2024-03-01,Classic Bike Refunds & Discounts,-117958.48,reported,-0.0140320242
+2024-03,2024-03-01,Ebike Refunds & Discounts,-34367.33,reported,-0.0040882453
+2024-03,2024-03-01,Ebike Surcharges & Other Fees,4019419.26,reported,0.4781393282
+2024-03,2024-03-01,Lyft Pink,512740.44,reported,0.0609942267
+2024-03,2024-03-01,Memberships,1048998.51,reported,0.1247860475
+2024-03,2024-03-01,Overages,,reported,
+2024-03,2024-03-01,Sponsorship,77520.94,reported,0.009221683
+2024-04,2024-04-01,Casual Ridership,4107368.43,reported,0.2862370759
+2024-04,2024-04-01,Classic Bike Refunds & Discounts,-134494.51,reported,-0.0093727446
+2024-04,2024-04-01,Ebike Refunds & Discounts,-24486.45,reported,-0.0017064283
+2024-04,2024-04-01,Ebike Surcharges & Other Fees,5221125.53,reported,0.3638533359
+2024-04,2024-04-01,Lyft Pink,872578.36,reported,0.0608088324
+2024-04,2024-04-01,Memberships,1732759.45,reported,0.1207537154
+2024-04,2024-04-01,Overages,,reported,
+2024-04,2024-04-01,Sponsorship,2574682.41,reported,0.1794262134
+2024-05,2024-05-01,Casual Ridership,5930649.42,reported,0.2313746048
+2024-05,2024-05-01,Classic Bike Refunds & Discounts,-169762.34,reported,-0.0066230005
+2024-05,2024-05-01,Ebike Refunds & Discounts,,reported,
+2024-05,2024-05-01,Ebike Surcharges & Other Fees,7085161.01,reported,0.2764159896
+2024-05,2024-05-01,Lyft Pink,1451177.39,reported,0.0566153167
+2024-05,2024-05-01,Memberships,2737023.06,reported,0.1067804862
+2024-05,2024-05-01,Overages,,reported,
+2024-05,2024-05-01,Sponsorship,8597991.55,reported,0.3354366033
+2024-06,2024-06-01,Casual Ridership,7690917.82,reported,0.3420923553
+2024-06,2024-06-01,Classic Bike Refunds & Discounts,-222487.09,reported,-0.0098962353
+2024-06,2024-06-01,Ebike Refunds & Discounts,,reported,
+2024-06,2024-06-01,Ebike Surcharges & Other Fees,8750660.64,reported,0.3892297615
+2024-06,2024-06-01,Lyft Pink,2091927.01,reported,0.0930490033
+2024-06,2024-06-01,Memberships,4052864.39,reported,0.1802715823
+2024-06,2024-06-01,Overages,,reported,
+2024-06,2024-06-01,Sponsorship,118109.89,reported,0.005253533
+2024-07,2024-07-01,Casual Ridership,7565899.95,reported,0.3400350997
+2024-07,2024-07-01,Classic Bike Refunds & Discounts,-292650.7,reported,-0.0131526336
+2024-07,2024-07-01,Ebike Refunds & Discounts,-19851.86,reported,-0.0008922044
+2024-07,2024-07-01,Ebike Surcharges & Other Fees,9401100.44,reported,0.4225147235
+2024-07,2024-07-01,Lyft Pink,1941041.6,reported,0.0872364528
+2024-07,2024-07-01,Memberships,3502606.88,reported,0.1574180583
+2024-07,2024-07-01,Overages,,reported,
+2024-07,2024-07-01,Sponsorship,152203.6,reported,0.0068405037
+2024-08,2024-08-01,Casual Ridership,7301556.18,reported,0.3356744293
+2024-08,2024-08-01,Classic Bike Refunds & Discounts,-262663.24,reported,-0.0120754167
+2024-08,2024-08-01,Ebike Refunds & Discounts,-1893.54,reported,-8.70517e-05
+2024-08,2024-08-01,Ebike Surcharges & Other Fees,9273334.28,reported,0.4263229805
+2024-08,2024-08-01,Lyft Pink,1886890.0,reported,0.0867459906
+2024-08,2024-08-01,Memberships,3492925.01,reported,0.1605802353
+2024-08,2024-08-01,Overages,,reported,
+2024-08,2024-08-01,Sponsorship,61750.0,reported,0.0028388326
+2024-09,2024-09-01,Casual Ridership,7020477.26,reported,0.307790672
+2024-09,2024-09-01,Classic Bike Refunds & Discounts,-247376.17,reported,-0.0108454276
+2024-09,2024-09-01,Ebike Refunds & Discounts,-28157.06,reported,-0.0012344574
+2024-09,2024-09-01,Ebike Surcharges & Other Fees,10327110.09,reported,0.4527595542
+2024-09,2024-09-01,Lyft Pink,1942236.0,reported,0.0851512086
+2024-09,2024-09-01,Memberships,3639659.23,reported,0.1595693738
+2024-09,2024-09-01,Overages,,reported,
+2024-09,2024-09-01,Sponsorship,155309.99,reported,0.0068090764
+2024-10,2024-10-01,Casual Ridership,6512811.41,reported,0.224941404
+2024-10,2024-10-01,Classic Bike Refunds & Discounts,-209673.2,reported,-0.0072417549
+2024-10,2024-10-01,Ebike Refunds & Discounts,-27250.99,reported,-0.0009412027
+2024-10,2024-10-01,Ebike Surcharges & Other Fees,10117033.89,reported,0.3494251045
+2024-10,2024-10-01,Lyft Pink,1334240.0,reported,0.0460823752
+2024-10,2024-10-01,Memberships,2709607.61,reported,0.0935852279
+2024-10,2024-10-01,Overages,,reported,
+2024-10,2024-10-01,Sponsorship,8516600.0,reported,0.2941488461
+2024-11,2024-11-01,Casual Ridership,3995101.33,reported,0.3015916516
+2024-11,2024-11-01,Classic Bike Refunds & Discounts,-147855.99,reported,-0.0111617024
+2024-11,2024-11-01,Ebike Refunds & Discounts,-16847.39,reported,-0.0012718156
+2024-11,2024-11-01,Ebike Surcharges & Other Fees,6986262.98,reported,0.5273955318
+2024-11,2024-11-01,Lyft Pink,784881.7,reported,0.0592510048
+2024-11,2024-11-01,Memberships,1576731.24,reported,0.1190280144
+2024-11,2024-11-01,Overages,,reported,
+2024-11,2024-11-01,Sponsorship,68450.0,reported,0.0051673154
+2024-12,2024-12-01,Casual Ridership,1776824.24,reported,0.2456328589
+2024-12,2024-12-01,Classic Bike Refunds & Discounts,-89728.85,reported,-0.0124043524
+2024-12,2024-12-01,Ebike Refunds & Discounts,-10243.29,reported,-0.0014160594
+2024-12,2024-12-01,Ebike Surcharges & Other Fees,3831552.77,reported,0.5296839383
+2024-12,2024-12-01,Lyft Pink,447714.49,reported,0.0618932293
+2024-12,2024-12-01,Memberships,1209089.23,reported,0.1671476771
+2024-12,2024-12-01,Overages,,reported,
+2024-12,2024-12-01,Sponsorship,68450.0,reported,0.0094627081
+2025-01,2025-01-01,Casual Ridership,1209512.37,reported,0.1861521231
+2025-01,2025-01-01,Classic Bike Refunds & Discounts,-67928.69,reported,-0.0104546842
+2025-01,2025-01-01,Ebike Refunds & Discounts,-5194.54,reported,-0.0007994748
+2025-01,2025-01-01,Ebike Surcharges & Other Fees,3285757.87,reported,0.5057003291
+2025-01,2025-01-01,Lyft Pink,448321.0,reported,0.06899963
+2025-01,2025-01-01,Memberships,1617072.63,reported,0.2488783999
+2025-01,2025-01-01,Overages,,reported,
+2025-01,2025-01-01,Sponsorship,9900.0,reported,0.0015236769
+2025-02,2025-02-01,Casual Ridership,1181260.25,reported,0.1877060016
+2025-02,2025-02-01,Classic Bike Refunds & Discounts,-62392.38,reported,-0.0099143471
+2025-02,2025-02-01,Ebike Refunds & Discounts,-7225.69,reported,-0.0011481851
+2025-02,2025-02-01,Ebike Surcharges & Other Fees,3233775.95,reported,0.5138572584
+2025-02,2025-02-01,Lyft Pink,364920.0,reported,0.0579869458
+2025-02,2025-02-01,Memberships,1563497.42,reported,0.2484447006
+2025-02,2025-02-01,Overages,,reported,
+2025-02,2025-02-01,Sponsorship,19305.0,reported,0.0030676258
+2025-03,2025-03-01,Casual Ridership,3149330.75,reported,0.2764956998
+2025-03,2025-03-01,Classic Bike Refunds & Discounts,-116133.16,reported,-0.0101959184
+2025-03,2025-03-01,Ebike Refunds & Discounts,-12384.43,reported,-0.0010872918
+2025-03,2025-03-01,Ebike Surcharges & Other Fees,6029525.5,reported,0.5293625869
+2025-03,2025-03-01,Lyft Pink,739947.0,reported,0.0649636954
+2025-03,2025-03-01,Memberships,1584876.11,reported,0.1391443021
+2025-03,2025-03-01,Overages,0.0,reported,0.0
+2025-03,2025-03-01,Sponsorship,15000.0,reported,0.001316926
+2025-04,2025-04-01,Casual Ridership,4410128.9,reported,0.2295950857
+2025-04,2025-04-01,Classic Bike Refunds & Discounts,-155930.32,reported,-0.0081178659
+2025-04,2025-04-01,Ebike Refunds & Discounts,-21122.65,reported,-0.0010996632
+2025-04,2025-04-01,Ebike Surcharges & Other Fees,7497493.66,reported,0.390325938
+2025-04,2025-04-01,Lyft Pink,1142414.0,reported,0.0594750508
+2025-04,2025-04-01,Memberships,2062506.02,reported,0.107375829
+2025-04,2025-04-01,Overages,0.0,reported,0.0
+2025-04,2025-04-01,Sponsorship,4272800.0,reported,0.2224456257
+2025-05,2025-05-01,Casual Ridership,6083843.71,reported,0.3002805239
+2025-05,2025-05-01,Classic Bike Refunds & Discounts,-216854.46,reported,-0.0107032945
+2025-05,2025-05-01,Ebike Refunds & Discounts,-38559.9,reported,-0.0019032026
+2025-05,2025-05-01,Ebike Surcharges & Other Fees,9445040.48,reported,0.4661792509
+2025-05,2025-05-01,Lyft Pink,1787534.0,reported,0.0882273891
+2025-05,2025-05-01,Memberships,3199529.99,reported,0.1579193331
+2025-05,2025-05-01,Overages,0.0,reported,0.0
+2025-05,2025-05-01,Sponsorship,0.0,reported,0.0
+2025-06,2025-06-01,Casual Ridership,6957402.55,reported,0.2489690356
+2025-06,2025-06-01,Classic Bike Refunds & Discounts,-231446.25,reported,-0.0082822503
+2025-06,2025-06-01,Ebike Refunds & Discounts,-32996.22,reported,-0.0011807621
+2025-06,2025-06-01,Ebike Surcharges & Other Fees,10725754.2,reported,0.3838186249
+2025-06,2025-06-01,Lyft Pink,2310141.0,reported,0.0826678596
+2025-06,2025-06-01,Memberships,3965995.5,reported,0.1419222286
+2025-06,2025-06-01,Overages,0.0,reported,0.0
+2025-06,2025-06-01,Sponsorship,4250000.0,reported,0.1520852637
+2025-07,2025-07-01,Casual Ridership,8069852.82,reported,0.3176156339
+2025-07,2025-07-01,Classic Bike Refunds & Discounts,-274488.97,reported,-0.0108034174
+2025-07,2025-07-01,Ebike Refunds & Discounts,-64657.48,reported,-0.0025448081
+2025-07,2025-07-01,Ebike Surcharges & Other Fees,11617815.01,reported,0.4572573703
+2025-07,2025-07-01,Lyft Pink,2238414.0,reported,0.0881001547
+2025-07,2025-07-01,Memberships,3820670.41,reported,0.1503750665
+2025-07,2025-07-01,Overages,0.0,reported,0.0
+2025-07,2025-07-01,Sponsorship,0.0,reported,0.0
+2025-08,2025-08-01,Casual Ridership,8586883.63,reported,0.3200320135
+2025-08,2025-08-01,Classic Bike Refunds & Discounts,-251439.97,reported,-0.0093711343
+2025-08,2025-08-01,Ebike Refunds & Discounts,-75773.83,reported,-0.0028240806
+2025-08,2025-08-01,Ebike Surcharges & Other Fees,12070856.75,reported,0.4498792294
+2025-08,2025-08-01,Lyft Pink,2385214.68,reported,0.0888966346
+2025-08,2025-08-01,Memberships,4092785.82,reported,0.1525375844
+2025-08,2025-08-01,Overages,0.0,reported,0.0
+2025-08,2025-08-01,Sponsorship,22800.0,reported,0.000849753
+2025-09,2025-09-01,Casual Ridership,6967575.89,reported,0.2349305197
+2025-09,2025-09-01,Classic Bike Refunds & Discounts,-234782.05,reported,-0.0079163069
+2025-09,2025-09-01,Ebike Refunds & Discounts,-59487.53,reported,-0.0020057817
+2025-09,2025-09-01,Ebike Surcharges & Other Fees,11882723.95,reported,0.4006579272
+2025-09,2025-09-01,Lyft Pink,2291698.94,reported,0.0772707799
+2025-09,2025-09-01,Memberships,4183298.62,reported,0.1410511395
+2025-09,2025-09-01,Overages,0.0,reported,0.0
+2025-09,2025-09-01,Sponsorship,4627000.0,reported,0.1560117223
+2025-10,2025-10-01,Casual Ridership,5415810.24,reported,0.2805822772
+2025-10,2025-10-01,Classic Bike Refunds & Discounts,-191927.25,reported,-0.0099433663
+2025-10,2025-10-01,Ebike Refunds & Discounts,-49037.88,reported,-0.0025405543
+2025-10,2025-10-01,Ebike Surcharges & Other Fees,9882682.81,reported,0.5120019951
+2025-10,2025-10-01,Lyft Pink,1508250.5,reported,0.0781394364
+2025-10,2025-10-01,Memberships,2736261.23,reported,0.1417602119
+2025-10,2025-10-01,Overages,0.0,reported,0.0
+2025-10,2025-10-01,Sponsorship,0.0,reported,0.0
+2025-11,2025-11-01,Casual Ridership,3418359.6,reported,0.2679561675
+2025-11,2025-11-01,Classic Bike Refunds & Discounts,-154912.33,reported,-0.0121431678
+2025-11,2025-11-01,Ebike Refunds & Discounts,-35025.43,reported,-0.0027455508
+2025-11,2025-11-01,Ebike Surcharges & Other Fees,6768320.82,reported,0.5305507669
+2025-11,2025-11-01,Lyft Pink,863376.72,reported,0.0676778175
+2025-11,2025-11-01,Memberships,1897040.24,reported,0.1487039668
+2025-11,2025-11-01,Overages,0.0,reported,0.0
+2025-11,2025-11-01,Sponsorship,0.0,reported,0.0
+2025-12,2025-12-01,Casual Ridership,1449409.74,reported,0.2210241316
+2025-12,2025-12-01,Classic Bike Refunds & Discounts,-107462.79,reported,-0.0163872708
+2025-12,2025-12-01,Ebike Refunds & Discounts,-16799.18,reported,-0.0025617492
+2025-12,2025-12-01,Ebike Surcharges & Other Fees,3656219.6,reported,0.5575461098
+2025-12,2025-12-01,Lyft Pink,488337.22,reported,0.0744677692
+2025-12,2025-12-01,Memberships,1087994.47,reported,0.1659110093
+2025-12,2025-12-01,Overages,0.0,reported,0.0
+2025-12,2025-12-01,Sponsorship,0.0,reported,0.0
+2026-01,2026-01-01,Casual Ridership,1147053.04,reported,0.1148550597
+2026-01,2026-01-01,Classic Bike Refunds & Discounts,-116796.34,reported,-0.0116948826
+2026-01,2026-01-01,Ebike Refunds & Discounts,-32365.05,reported,-0.0032407305
+2026-01,2026-01-01,Ebike Surcharges & Other Fees,3272267.13,reported,0.3276539301
+2026-01,2026-01-01,Lyft Pink,482341.37,reported,0.04829711
+2026-01,2026-01-01,Memberships,984461.18,reported,0.0985746462
+2026-01,2026-01-01,Overages,0.0,reported,0.0
+2026-01,2026-01-01,Sponsorship,4250000.0,reported,0.4255548669
+2026-02,2026-02-01,Casual Ridership,799634.49,derived_from_ytd,0.1793332192
+2026-02,2026-02-01,Classic Bike Refunds & Discounts,-106138.68,derived_from_ytd,-0.0238036145
+2026-02,2026-02-01,Ebike Refunds & Discounts,-27012.4,derived_from_ytd,-0.0060580437
+2026-02,2026-02-01,Ebike Surcharges & Other Fees,2292115.57,derived_from_ytd,0.5140504432
+2026-02,2026-02-01,Lyft Pink,380257.95,derived_from_ytd,0.0852800663
+2026-02,2026-02-01,Memberships,836041.3,derived_from_ytd,0.1874981377
+2026-02,2026-02-01,Overages,0.0,derived_from_ytd,0.0
+2026-02,2026-02-01,Sponsorship,284032.99,derived_from_ytd,0.0636997917
+2026-03,2026-03-01,Casual Ridership,2869334.35,reported,0.2499614426
+2026-03,2026-03-01,Classic Bike Refunds & Discounts,-135868.09,reported,-0.0118361193
+2026-03,2026-03-01,Ebike Refunds & Discounts,-23831.67,reported,-0.0020760908
+2026-03,2026-03-01,Ebike Surcharges & Other Fees,6155104.0,reported,0.5362005564
+2026-03,2026-03-01,Lyft Pink,960885.34,reported,0.083707319
+2026-03,2026-03-01,Memberships,1630983.89,reported,0.1420828095
+2026-03,2026-03-01,Overages,0.0,reported,0.0
+2026-03,2026-03-01,Sponsorship,22500.0,reported,0.0019600826
+2026-04,2026-04-01,Casual Ridership,4680536.78,reported,0.2130372196
+2026-04,2026-04-01,Classic Bike Refunds & Discounts,-197046.49,reported,-0.0089686799
+2026-04,2026-04-01,Ebike Refunds & Discounts,-58718.87,reported,-0.0026726218
+2026-04,2026-04-01,Ebike Surcharges & Other Fees,8903297.81,reported,0.4052385229
+2026-04,2026-04-01,Lyft Pink,1526158.06,reported,0.069463928
+2026-04,2026-04-01,Memberships,2564216.59,reported,0.116711736
+2026-04,2026-04-01,Overages,0.0,reported,0.0
+2026-04,2026-04-01,Sponsorship,4552068.07,reported,0.2071898953
+2026-05,2026-05-01,Casual Ridership,6304940.96,derived_from_ytd,0.2756613943
+2026-05,2026-05-01,Classic Bike Refunds & Discounts,-220928.03,derived_from_ytd,-0.009659302
+2026-05,2026-05-01,Ebike Refunds & Discounts,-57079.76,derived_from_ytd,-0.002495612
+2026-05,2026-05-01,Ebike Surcharges & Other Fees,11404974.04,derived_from_ytd,0.4986424244
+2026-05,2026-05-01,Lyft Pink,2201715.22,derived_from_ytd,0.0962622634
+2026-05,2026-05-01,Memberships,3622673.75,derived_from_ytd,0.1583886833
+2026-05,2026-05-01,Overages,0.0,derived_from_ytd,0.0
+2026-05,2026-05-01,Sponsorship,-384247.03,derived_from_ytd,-0.0167998515
+2026-06,2026-06-01,Casual Ridership,8108499.08,reported,0.2722376528
+2026-06,2026-06-01,Classic Bike Refunds & Discounts,-289478.61,reported,-0.0097190586
+2026-06,2026-06-01,Ebike Refunds & Discounts,-60580.55,reported,-0.0020339531
+2026-06,2026-06-01,Ebike Surcharges & Other Fees,13751401.6,reported,0.4616944834
+2026-06,2026-06-01,Lyft Pink,2857264.95,reported,0.095930837
+2026-06,2026-06-01,Memberships,4907395.75,reported,0.1647626629
+2026-06,2026-06-01,Overages,0.0,reported,0.0
+2026-06,2026-06-01,Sponsorship,510132.63,reported,0.0171273757

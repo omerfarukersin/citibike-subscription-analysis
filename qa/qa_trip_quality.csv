@@ -1,0 +1,3 @@
+city_id,trips,under_1_min,over_120_min,negative_duration,no_start_station,no_end_station,valid_trips,valid_share
+CHI,1995510,56709,11296,0,435050,456851,1927505,0.9659209926284509
+NYC,15396715,3,34469,0,9413,52679,15313178,0.994574362128545

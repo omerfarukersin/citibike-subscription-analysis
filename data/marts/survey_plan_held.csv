@@ -1,0 +1,9 @@
+access_code,access_method,plan_name,is_subscription,respondents_n,weighted_persons,weighted_share
+1,I purchased a single trip (typically $4.79/trip),Single Ride,No,205,317136.8938268153,0.4625264186
+2,I have a full price annual membership ($219.99/year),Annual Membership,Yes,91,120681.1565461538,0.1760067158
+3,I have a LyftPink All Access annual membership ($199/year),Lyft Pink,Yes,79,94189.5766734126,0.1373702285
+4,I have a discounted annual membership purchased through my employer or school (various prices),Discounted Annual (employer/school),Yes,25,36791.8745244024,0.0536588908
+5,I have a Reduced Fare Bike Share membership ($5/month),Reduced Fare Bike Share,Yes,27,41894.0728370568,0.0611001616
+6,I have access through a LyftPink monthly plan ($9.99/month or greater),Lyft Pink (monthly plan),Yes,8,10580.7836923951,0.0154314811
+7,I purchased a day pass (typically $19/day),Day Pass,No,15,40183.4198919734,0.05860527
+997,Other,Other,Not stated,18,24204.4481314966,0.0353008336

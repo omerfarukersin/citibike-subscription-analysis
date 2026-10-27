@@ -1,0 +1,9 @@
+city_id,rider_type,snow_day,days,avg_trips_vs_baseline
+CHI,casual,False,204,1.0487464591
+CHI,casual,True,55,0.8191949516
+CHI,member,False,204,1.0306655736
+CHI,member,True,55,0.8862585998
+NYC,casual,False,230,1.0496346334
+NYC,casual,True,29,0.6063460107
+NYC,member,False,230,1.0397731167
+NYC,member,True,29,0.6845580402

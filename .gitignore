@@ -1,0 +1,62 @@
+# Python environment (create with `make setup`)
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Large generated data: rebuild with `make all`
+*.duckdb
+*.duckdb.wal
+data/raw/*
+# small inputs that cannot be re-downloaded in the same form are committed
+!data/raw/reports/
+data/raw/reports/*
+!data/raw/reports/report_index.csv
+!data/raw/reports/missing_reports.txt
+!data/raw/survey/
+data/raw/survey/*
+!data/raw/survey/cms_2024_data_dictionary.xlsx
+data/staging/
+
+# Logs
+*.log
+logs/
+hyperd.log
+
+# Tableau temporary / build files
+tableau/screenshots/
+tableau/build/
+tableau/build_gallery/
+tableau/build_story/
+tableau/build_interactive/
+tableau/gallery_data/
+# outputs of the optional builders (only citibike_story.twbx is committed)
+tableau/citibike_dashboard.twbx
+tableau/citibike_gallery.twbx
+tableau/citibike_interactive.twbx
+tableau/preview/
+tableau/gallery_preview/
+tableau/.~*
+*.twbr
+*.tmp
+~*.twb
+*.twb~
+
+# LaTeX build files
+*.aux
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.xdv
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Secrets (none are needed; kept here as a guard)
+.env

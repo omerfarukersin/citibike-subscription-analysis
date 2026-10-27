@@ -1,0 +1,7 @@
+freq_code,frequency,respondents_n,weighted_share
+1,I have never used Citi Bike,556,0.4947690217
+2,"I have used Citi Bike in the past, but not within the last 12 months",244,0.1936407654
+3,Less than monthly,235,0.1679560315
+4,I use it at least once a month,95,0.05687958
+5,I use it at least once a week,83,0.053572583
+6,I use it 5 or more days a week,54,0.0331820185
